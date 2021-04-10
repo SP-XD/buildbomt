@@ -4,7 +4,7 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 . build/envsetup.sh 
-lunch havoc_RMX2151-userdebug  ##edit this
+lunch kangos_X01AD-userdebug  ##edit this
 export CCACHE_DIR=/tmp/ccache ##set additional flags if you need(optional)
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -23,8 +23,8 @@ make_metalava(){
 }
 
 make_rom(){
-	brunch -j20
-	zip=$(up out/target/product/RMX2151/*zip) ##edit this
+	make bacon -j20
+	zip=$(up out/target/product/X01AD/*zip) ##edit this
 	echo " "
 	echo "$zip"
 }
